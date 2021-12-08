@@ -1,0 +1,83 @@
+// Define a mixin that accepts a theme and outputs the theme-specific styles.
+@mixin custom-component-theme($theme) {
+  // Extract the palettes you need from the theme definition.
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  $border-color: mat-color($foreground, divider);
+
+  .mat-row.highlighted,
+  .mat-row.highlighted .mat-cell {
+    background: mat-color($primary, 400);
+    color: mat-color($primary, default-contrast);
+  }
+
+  .primary-bg {
+    background: mat-color($primary, 400);
+    color: mat-color($primary, default-contrast);
+  }
+
+  .side-menu-holder .mat-list-base .mat-list-item:hover,
+  .side-menu-holder .mat-list-base .mat-list-option:hover,
+  .mat-row.hovered {
+    background: mat-color($background, hover);
+  }
+
+  .primary-outline {
+    outline: 1px solid mat-color($primary, 200);
+  }
+
+  .primary-outline-dashed {
+    outline: 1px dashed mat-color($primary, 100);
+  }
+
+  .outline {
+    outline: 1px solid $border-color;
+  }
+
+  .outline-dashed {
+    outline: 1px dashed $border-color;
+  }
+
+  .border-bottom {
+    border-bottom: 1px solid $border-color;
+  }
+
+  .border-top {
+    border-top: 1px solid $border-color;
+  }
+
+  .border-left {
+    border-left: 1px solid $border-color;
+  }
+
+  .border-right {
+    border-right: 1px solid $border-color;
+  }
+
+  .border {
+    border: 1px solid $border-color;
+    border-radius: 5px;
+  }
+
+  .menu-item-title:not(.primary-bg):hover,
+  .sub-menu-item:not(.primary-bg):hover {
+    background: mat-color($background, hover);
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px mat-color($primary, 300);
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: mat-color($primary, 300);
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: mat-color($primary, 300);
+  }
+}

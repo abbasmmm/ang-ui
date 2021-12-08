@@ -1,0 +1,98 @@
+// ::ng-deep.light-theme .side-menu-holder .mat-list-base .mat-list-item:hover,
+// ::ng-deep.light-theme .side-menu-holder .mat-list-base .mat-list-option:hover {
+//   background-color: rgb(52, 57, 68, 0.5);
+// }
+
+::ng-deep.light-theme .side-menu-holder .mat-expansion-panel-header-title {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+::ng-deep.light-theme .side-menu-holder .mat-expansion-panel-header-description,
+::ng-deep.light-theme .side-menu-holder .mat-expansion-indicator::after,
+::ng-deep.light-theme .side-menu-holder .mat-list-item {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+::ng-deep.dark-theme .side-menu-holder .menu-item {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+::ng-deep.light-theme .menu-item.active {
+  background-color: #23262e;
+}
+
+::ng-deep.light-theme.menu-item-title:not(.primary-bg):hover,
+::ng-deep.light-theme.sub-menu-item:not(.primary-bg):hover {
+  background-color: #21242c !important;
+}
+// ::ng-deep .side-menu-holder .mat-list-base .mat-list-item:hover,
+// ::ng-deep .side-menu-holder .mat-list-base .mat-list-option:hover {
+//   background-color: rgb(52, 57, 68, 0.5);
+// }
+
+// ::ng-deep .side-menu-holder .mat-expansion-panel-header-title {
+//   color: rgba(255, 255, 255, 0.5) !important;
+// }
+
+// ::ng-deep .side-menu-holder .mat-expansion-panel-header-description,
+// ::ng-deep .side-menu-holder .mat-expansion-indicator::after,
+// ::ng-deep .side-menu-holder .mat-list-item {
+//   color: rgba(255, 255, 255, 0.5) !important;
+// }
+
+// ::ng-deep .side-menu-holder .menu-item {
+//   color: rgba(255, 255, 255, 0.5) !important;
+// }
+
+.menu-container {
+  padding: 0;
+  position: relative;
+  font-size: small;
+  overflow: hidden;
+}
+
+.sub-menu {
+  overflow: hidden;
+  height: 0;
+  transition: height 500ms;
+  overflow: hidden;
+}
+
+.menu-item-title {
+  padding: 6px 0;
+  cursor: pointer;
+}
+
+.menu-item-title {
+  padding-left: 17px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.menu-item-title:hover,
+.sub-menu-item:hover,
+.menu-item-title.primary-bg,
+.sub-menu-item.primary-bg {
+  border-radius: 0 20px 20px 0;
+}
+
+.sub-menu-item {
+  padding: 5px 0 5px 30px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.menu-item-title > span {
+  position: absolute;
+  margin-top: 3px;
+  margin-left: 5px; /* optional */
+}
+
+.expand {
+  position: absolute;
+  right: 25px;
+}
+
+span {
+  white-space: nowrap;
+}

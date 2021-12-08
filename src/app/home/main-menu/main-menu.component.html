@@ -1,0 +1,16 @@
+<div class="menu" [@topNavAnimation]="open? 'expand': 'collapse'">
+    <mat-card>
+        <div class="app border-right" *ngFor="let key of mainMenuTitles"
+            [ngClass]="highlightMenu === key ? 'primary-outline':''">
+            <div>
+                <div class="title">
+                    {{key}}
+                </div>
+                <div class="sub-app">
+                    <a class="active" (click)="navigate(menu)"
+                        *ngFor="let menu of mainMenu[key]">{{menu.displayText}}</a>
+                </div>
+            </div>
+        </div>
+    </mat-card>
+</div>

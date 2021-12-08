@@ -1,0 +1,23 @@
+<div class="menu-container">
+    <div class="menu-item" [class.active]="menu.isExpanded" *ngFor="let menu of menuItems">
+        <div *ngIf="!status">
+            <div class="menu-item-title" (click)='menuClick(menu)' [ngClass]="menu.isSelected? 'primary-bg':'na'">
+                <mat-icon>{{(menu.icon? menu.icon: 'view_agenda')}}</mat-icon>
+            </div>
+        </div>
+        <div *ngIf="status">
+            <div class="menu-item-title" (click)='menuClick(menu)' [ngClass]="menu.isSelected? 'primary-bg':'na'">
+                <mat-icon>{{(menu.icon? menu.icon: 'view_agenda')}}</mat-icon>
+                <span>{{menu.title}}</span>
+                <mat-icon *ngIf="!!menu.children" class="expand"
+                    [@rotateChevron]="menu.isExpanded ? 'expand': 'collapse'">chevron_right</mat-icon>
+            </div>
+            <div class="sub-menu" [ngStyle]="{'height': (menu.isExpanded ? (menu.children?.length??0)*29.2:0)+'px'}">
+                <div class="sub-menu-item" *ngFor="let submenu of menu.children" (click)='menuClick(submenu)'
+                    [ngClass]="submenu.isSelected ? 'primary-bg':''">
+                    <span >{{submenu.title}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

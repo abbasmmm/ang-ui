@@ -1,0 +1,53 @@
+<mat-toolbar class="header-toolbar lite-font">
+    <mat-toolbar-row>
+        <div style="width:100%">
+            <div class="header-left">
+                <div class="app-header">
+                    <span>{{title}}</span> 
+                    <button mat-flat-button (click)='changeApp()'></button>
+                </div>
+
+            </div>
+
+            <div class="header-right">
+                
+
+                <div class="current-user">
+                    <div>
+                        <mat-icon style="margin:5px 5px 0 0">account_circle</mat-icon>
+                    </div>
+                    <span>{{config.userName}}</span>
+                </div>
+
+                <mat-divider vertical style="height:72px;float: left"></mat-divider>
+                <div style="padding: 10px;font-size: medium;margin-top: 15px">{{config.environment}}</div>
+                <mat-divider vertical style="height:72px;float: left"></mat-divider>
+                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Change theme" class=" clickable"
+                    style="margin-right: -12px">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">                   
+                    <button mat-menu-item [matMenuTriggerFor]="themes">
+                        <mat-icon>color_lens</mat-icon>
+                        <span>Theme</span>
+                    </button>
+                </mat-menu>
+
+                <mat-menu #themes="matMenu">
+                    <button mat-menu-item (click)='setTheme("dark-theme")'>
+                        Dark
+                    </button>
+                    <button mat-menu-item (click)='setTheme("light-theme")'>
+                        Light
+                    </button>
+                </mat-menu>
+            </div>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-progress-bar *ngIf="layoutService.activeRequestCount>0" mode="indeterminate"></mat-progress-bar>
+
+<div class="topnav" [hidden]="!openMenu">
+    <app-main-menu [open]="openMenu" [currentMenu]="currentMenu" [highlightMenu]="highlightMenu"
+        (mouseleave)="showMenu(false)" (click)="showMenu(false)"></app-main-menu>
+</div>

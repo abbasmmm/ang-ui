@@ -1,0 +1,96 @@
+mat-icon {
+  //color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  opacity: 0.55;
+}
+.app-header {
+  float: left;
+  padding: 20px;
+  opacity: 0.75;
+}
+
+.clickable:hover {
+  opacity: 1 !important;
+}
+
+.header-toolbar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0; /* Sets the sticky toolbar to be on top */
+  z-index: 101; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.header-left div,
+.header-left mat-divider,
+.header-left button {
+  float: left;
+  opacity: 0.6;
+}
+
+button.clickable {
+  margin: 20px 8px;
+}
+
+.header-right {
+  float: right;
+}
+
+.header-right div,
+.header-right mat-divider,
+.header-right button {
+  float: left;
+  opacity: 0.6;
+}
+
+.region {
+  padding: 20px 12px 0 12px;
+  cursor: pointer;
+}
+
+.current-user,
+.apps-menu {
+  font-size: medium;
+  padding: 25px 12px 0 12px;
+  cursor: pointer;
+}
+
+::ng-deep.mat-menu-panel,
+::ng-deep.mat-menu {
+  overflow: hidden !important;
+  min-height: 0 !important
+}
+
+.topnav {
+  position: fixed;
+  top: 64px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba($color: #000000, $alpha: 0.5);
+  z-index: 9999;
+}
+
+.mat-progress-bar {
+  position: fixed;
+  height: 3px;
+  z-index: 103;
+}
+
+.mat-menu-item {
+  height: 35px;
+  line-height: 35px;
+}
+
+// .busy-indicator {
+//   /* Height & width depends on how you want to reveal the overlay (see JS below) */
+//   height: 100%;
+//   width: 100%;
+//   position: fixed; /* Stay in place */
+//   display: grid;
+//   place-items: center;
+//   z-index: 9999; /* Sit on top */
+//   left: 0;
+//   top: 0;
+//   /*background-color: rgb(0,0,0); /* Black fallback color */
+//   background-color: rgba(0, 0, 0, 0.2); /* Black w/opacity */
+// }

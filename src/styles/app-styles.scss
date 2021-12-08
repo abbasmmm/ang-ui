@@ -1,0 +1,88 @@
+body {
+  margin: 0px;
+  min-width: 1000px;
+  font-family: Open Sans, Roboto, sans-serif;
+}
+
+.body-card {
+  overflow: auto;
+  position:relative
+}
+
+.lite-font,
+.lite-font *:not(.mat-icon) {
+  font-family: Open Sans Light, Roboto Light, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.5;
+}
+
+.transparent-background .mat-dialog-container {
+  box-shadow: none !important;
+  overflow: hidden !important;
+  background-color: transparent !important;
+}
+
+.backdropBackground {
+  background-color: rgba($color: #000000, $alpha: 0.9);
+}
+
+.backdropBackground2 {
+  background-color: rgba($color: #000000, $alpha: 0.5);
+}
+
+.transparent-autocomplete {
+  background-color: transparent !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.small-progress-spinner-container {
+  margin-bottom: -35px !important;
+  margin-top: -35px !important;
+  float: right !important;
+
+  .mat-progress-spinner {
+    position: unset;
+  }
+}
+
+.w-100 {
+  width: 100%;
+  clear: both;
+}
+
+.error-snackbar {
+  span {
+    color: red;
+    font-size: 13px;
+    overflow: auto;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h7 {
+  opacity: 0.7;
+}
